@@ -1,0 +1,132 @@
+/* PAGE */
+.login-page {
+  animation: pageIn 1s ease;
+}
+
+/* CARD */
+.login-card {
+  animation: cardIn 1s ease;
+}
+
+/* LOGO */
+.login-logo {
+  animation: logoIn 1.2s ease;
+}
+
+/* CONTENT */
+.login-content {
+  animation: contentIn 0.8s ease 0.2s both;
+}
+
+/* INPUT FIELDS */
+.login-field {
+  animation: fieldIn 0.6s ease both;
+}
+
+.login-field:nth-child(1) {
+  animation-delay: 0.3s;
+}
+
+.login-field:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+/* OPTIONS */
+.login-options {
+  animation: contentIn 0.6s ease 0.7s both;
+}
+
+/* BUTTON */
+.login-button {
+  animation: buttonIn 0.6s ease 0.9s both;
+  transition: 0.2s ease;
+}
+
+.login-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(18, 61, 145, 0.25);
+}
+
+.login-button:active {
+  transform: scale(0.97);
+}
+
+/* SIGNUP */
+.login-signup {
+  animation: contentIn 0.6s ease 1s both;
+}
+
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes pageIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes cardIn {
+  from {
+    opacity: 0;
+    transform: scale(0.85) translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes logoIn {
+  from {
+    opacity: 0;
+    transform: scale(0.5) rotate(-8deg);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1) rotate(0);
+  }
+}
+
+@keyframes contentIn {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fieldIn {
+  from {
+    opacity: 0;
+    transform: translateX(-25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes buttonIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}

@@ -8,6 +8,8 @@ function UserLoginPage() {
 }
 
 function App() {
+  const API_URL = import.meta.env.VITE_API_URL;
+
   const [mode, setMode] = useState("signin");
   const [step, setStep] = useState(1);
   const [forgotPassword, setForgotPassword] = useState(false);
@@ -54,7 +56,7 @@ const handleForgotPassword = async () => {
   }
 
   try {
-    const response = await fetch("/api/admin/forgot-password", {
+    const response = await fetch(`${API_URL}/api/admin/forgot-password`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -92,7 +94,7 @@ const handleForgotPassword = async () => {
     }
 
     try {
-      const response = await fetch("/api/admin/login", {
+      const response = await fetch(`${API_URL}/api/admin/login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -199,7 +201,7 @@ const handleForgotPassword = async () => {
 
     try {
       const response = await fetch(
-        "/api/admin/signup",
+        `${API_URL}/api/admin/signup`,
         {
           method: "POST",
 
@@ -249,7 +251,7 @@ const handleForgotPassword = async () => {
     }
 
     try {
-      const response = await fetch("/api/admin/verify-otp", {
+      const response = await fetch(`${API_URL}/api/admin/verify-otp`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

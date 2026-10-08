@@ -6,7 +6,7 @@ function Reading({
 }) {
 
   const API_BASE =
-    `${window.location.protocol}//${window.location.hostname}:5000/api`;
+  `${import.meta.env.VITE_API_URL}/api`;
 
   const [activeReading, setActiveReading] =
     useState(null);

@@ -1,8 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import * as XLSX from "xlsx";
 
-const API_URL =
-  `${window.location.protocol}//${window.location.hostname}:5000/api/projects`;
+const API_URL = "/api/projects";
 
 function Project({
   projects,
@@ -693,8 +692,7 @@ function Project({
     if (!confirmDelete) return;
 
     try {
-      const API_URL =
-        `${window.location.protocol}//${window.location.hostname}:5000/api/projects/${selectedProject.id}`;
+     const API_URL = "/api/projects";
 
       const response = await fetch(API_URL, {
         method: "DELETE",

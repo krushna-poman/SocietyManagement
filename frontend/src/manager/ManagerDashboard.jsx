@@ -52,9 +52,8 @@ console.log("LOGIN USER ID:", userId);
 
       try {
         const response = await fetch(
-          `http://${window.location.hostname}:5000/api/users/${userId}/projects`
-        );
-
+  `${import.meta.env.VITE_API_URL}/api/users/${userId}/projects`
+);
         const data = await response.json();
 
         if (

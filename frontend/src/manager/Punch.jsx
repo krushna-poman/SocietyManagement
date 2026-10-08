@@ -375,8 +375,8 @@ function Punch({
     setLoading(true);
 
     try {
-      const API_URL =
-        `${window.location.protocol}//${window.location.hostname}:5000/api/punch/in`;
+     const API_URL =
+  `${import.meta.env.VITE_API_URL}/api/punch/in`;
 
       const formData = new FormData();
 
@@ -481,7 +481,7 @@ function Punch({
 
     try {
       const API_URL =
-        `${window.location.protocol}//${window.location.hostname}:5000/api/punch/out`;
+  `${import.meta.env.VITE_API_URL}/api/punch/out`;
 
       const response = await fetch(
         API_URL,
